@@ -1,6 +1,24 @@
 \section{Techniques}
-Defects can be introduced into the software product at every stage of software development process. According to Capers\cite{capers} 
-\subsection{Prototyping}
-prototyp
+Defects can be introduced into the software product at every stage of software development process. According to Capers\cite{capers} there are five main categories of defect origins: requirements, design, source code, user document and bad fixes. There is no technique that will allow us to prevent all of the defects from being introduced. Many different methods exist, each of them is applicable in different areas and performance of the techniques depends on the application area. The best results are achieved when many different techniques are used, on every stage of software development - companies that use multi-stage defect prevention achieve the best results\cite{capers}. Out of many different defect prevention techniques, we decided to present three of them - Short sprints (SCRUM methodology), Pair programming and Test Driven Development (TDD).
+ 
+\subsection{Short sprints}
+Sprint in Scrum methodology is a cycle of work of a team that lasts one to four weeks. Sprint starts with "Sprint planning" meeting and ends with "Sprint retrospective". During the sprint, team members are attending everyday meetings called "Daily scrum". At the end of each sprint, team should be able to deliver working version of the product. Scrum is an iterative approach, when one sprint ends, next sprint starts.
+
+Keeping short time of sprint can help in preventing defects. Short sprint time results in frequent contact with Product Owner - having frequent feedback from Product Owner can help in preventing requirements defects. Short sprints also result in smaller chunks of work - this may reduce the risk of introducing source code defects (it is easier to work on a limited part of code).   
+
+Unfortunately some team members may feel uncomfortable - they can feel under the pressure of really frequent deliveries. Feeling stressed certainly won'y improve their work. Other disadvantage might be the length of sprint planning and sprint retrospective meetings. Since sprint time is shorter, the meetings are more frequent. Time of the meetings should be scaled accordingly to the time of the sprint in order to avoid productivity reduction.
+
 \subsection{Pair programming}
-pair programming
+Pair programming is a method where two developers work together simultaneously on the same code at the same time. They are working on one workstation, one of the developers is writing the code and the other is just observing and reviewing the process.
+
+Because of two programmers working on the same task, this method can lead to less defects introduced in the design and source code. Different experiences, different ways of thinking and different point of views lead to considering more solution methods and choosing better options, preventing defects from appearing while creating the source code. Programmers generally like working with this method, it can be helpful to build good relations in the team. According to the surveys, over 90\% of programmers enjoyed collaborative programming more than individual programming\cite{pp}.
+
+Although this method has a lot of pluses, it is not perfect. First of all - there are two people working on the same code simultaneously. Even though the code can contain less defects, more resources were spend to produce it. The company should estimate if this method is actually beneficial for them. It can be really difficult to calculate if this method is profitable for the specific company/project. Another disadvantage is that some of the employees might feel stressed when someone else is observing them working, watching every single move. We personally know people who would not like to work like that. This method should not be forced on the employees. 
+
+\subsection{Test Driven Development}
+Test Driven Development is an approach in creating software, where developer starts with writing the code for the test case. Created test should fail - actual application code is not ready yet. Developer proceeds with writing actual functional code. When the code is ready and working properly, prepared test should pass. Programmer immediately knows that the code he produced is working as planned (assuming correctness of the test case).
+
+Testing methods are good at preventing code defects\cite{capers}. TDD leads to capturing the defect immediately when it is introduced. With proper continuous integration pipeline, tests would be executed and prevent introducing defect into the codebase. This approach also helps to detect design problems in the early phase of development. Written tests can also be a part of documentation.
+
+We think of TDD as a really beneficial and effective defect prevention approach, but sometimes it may be difficult to apply. It is hard to introduce this approach in complex, already existing legacy projects. Another hindrance is that it requires additional employees knowledge - training might be needed. 
+
